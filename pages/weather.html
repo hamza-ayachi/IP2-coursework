@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<!--
+Template Name: Lalapeden
+Author: <a href="https://www.os-templates.com/">OS Templates</a>
+Author URI: https://www.os-templates.com/
+Licence: Free to use under our free template licence terms
+Licence URI: https://www.os-templates.com/template-terms
+-->
+<html lang="">
+<head>
+<title>Geographer | Discover | Weather</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link rel="icon" href="../images/demo/gallery/icon.png" sizes="16x16" type="image/png"/>
+<link href="../layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+<link href="../layout/styles/mapsStyle.css" rel="stylesheet" type="text/css" media="all">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body id="top">
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row1">
+  <header id="header" class="hoc clear"> 
+    <!-- ################################################################################################ -->
+    <div id="logo" class="fl_left">
+      <h1><a href="../index.html">Geographer</a></h1>
+    </div>
+    <nav id="mainav" class="fl_right">
+      <ul class="clear">
+        <li><a href="../index.html">Home</a></li>
+        <li class="active"><a class="drop" href="#">Discover</a>
+          <ul>
+            <li><a href="earthquake.html">Earthquakues</a></li>
+            <li class="active"><a href="#">Weather</a></li>
+            <li><a href="volcanoes.html">volcanoes</a></li>
+          </ul>
+        </li>
+        <li><a href="AboutGeojson.html">About Geojson</a></li>
+        <li><a href="../index.html#authors">Authors</a></li>
+      </ul>
+    </nav>
+    <!-- ################################################################################################ -->
+  </header>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row2">
+  <div id="breadcrumb" class="hoc clear"> 
+    <!-- ################################################################################################ -->
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="#">Discover</a></li>
+      <li class="active"><a href="#">Weather</a></li>
+    </ul>
+    <!-- ################################################################################################ -->
+  </div>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row3">
+  <main class="hoc container clear"> 
+    <!-- main body -->
+    <!-- ################################################################################################ -->
+    <div class="content three_quarter first"> 
+      <!-- ################################################################################################ -->
+      <h1>Explore the weather conditions anywhere the world</h1>
+      <p>Provide longitude and latitude values for any location to view information about weather condition there. <a href="https://www.latlong.net/" target="_blank">Click</a> for a list of world longitude and latitude values.</p> 
+        
+      <form class="weatherForm" name="weatherForm">
+          <div class="one_third first">
+            
+            <input type="latitude" name="latitude" id="latitude" placeholder="latitude" size="22" required>
+          </div>
+           <div class="one_third">
+           
+            <input type="text" name="longitude" id="longitude" placeholder="longitude" size="22" required>
+          </div>
+          <div class="one_third">
+              &nbsp;
+              &nbsp;
+            <input type="button" id="submit" name="submit" value="Search" class="btn" onclick="loadWeather()">
+
+          </div>
+
+        </form>
+        &nbsp;
+        <p>Or you could enter a city name and click Search for weather details. </p>
+        <form class="weatherFormTwo" name="weatherFormTwo">
+          <div class="one_third first">
+              
+            <input type="cityName" name="cityName" id="cityName" placeholder="city name" size="22" required>
+              
+              &nbsp;
+          </div>
+
+          <div class="one_third">
+            <input type="button" id="submitCity" name="submitCity" value="Search" class="btn" onclick="loadCityWeather()">
+          </div>
+          
+        </form>
+      <!-- ################################################################################################ -->
+    </div>
+    <!-- ################################################################################################ -->
+    <!-- ################################################################################################ -->
+    <div class="sidebar one_quarter"> 
+      <!-- ################################################################################################ -->
+    <h6>View Weather</h6>
+    <p>Weather details will display here</p>
+    <div class="weatherBox">
+    <div id="weatherImg"></div> <!--will display an icon describing the weather of the location on the map-->
+    <div id="weatherInf"></div> <!--will give textual description of the icon above-->
+        
+    <div id="weatherInfAdd"></div> <!--will give additional textual description of the weather above-->
+    </div>
+        
+    </div>
+      
+    
+      </div>
+      <!-- ################################################################################################ -->
+    </div>
+    <!-- ################################################################################################ -->
+    <!-- / main body -->
+    <div class="clear"></div>
+  </main>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row4">
+    <footer id="footer" class="hoc clear"> 
+    <!-- ################################################################################################ -->
+    <h6 class="heading">Geographer</h6>
+    <nav>
+      <ul class="nospace">
+        <li><a href="../index.html"><i class="fa fa-lg fa-home"></i></a></li>
+        <li><a href="../index.html#authors">Authors</a></li>
+        <li><a href="pages/earthquake.html">Earthquakes</a></li>
+        <li><a href="#">Weather</a></li>
+        <li><a href="volcanoes.html">Volcanoes</a></li>
+        <li><a href="AboutGeojson.html">About Geojson</a></li>
+      </ul>
+    </nav>
+    <!-- ################################################################################################ -->
+  </footer>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row5">
+  <div id="copyright" class="hoc clear"> 
+    <!-- ################################################################################################ -->
+    <p class="fl_left">Copyright &copy; 2018 - All Rights Reserved - <a href="#">Domain Name</a></p>
+    <p class="fl_right">Template by <a target="_blank" href="https://www.os-templates.com/" title="Free Website Templates">OS Templates</a></p>
+    <!-- ################################################################################################ -->
+  </div>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a>
+<!-- JAVASCRIPTS -->
+<script src="../layout/scripts/jquery.min.js"></script>
+<script src="../layout/scripts/jquery.backtotop.js"></script>
+<script src="../layout/scripts/jquery.mobilemenu.js"></script>
+<script src="../layout/scripts/weather.js"></script>
+</body>
+</html>
